@@ -5,6 +5,8 @@ you need to create a config.ymal file (to store the litellm configurations and m
 after completing all 3 file , add NVIDIA_API_KEY to a .env file.
 then run  the following commands
 
+pip install "litellm[proxy]"
+
 ##To run litellm server on Terminal 1 : 
 litellm-up 
 
