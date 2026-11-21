@@ -1,0 +1,11 @@
+{
+  "env": {
+    "ANTHROPIC_BASE_URL": "http://localhost:4000",
+    "ANTHROPIC_AUTH_TOKEN": "REPLACE_WITH_YOUR_TOKEN",
+    "ANTHROPIC_DEFAULT_NIM_MODEL": "nvidia-nano-30b",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "nvidia-super-vl-120b",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "nvidia-main-ultra-550b",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "nvidia-lightning-30b",
+    "MAX_THINKING_TOKENS": "0"
+  }
+}

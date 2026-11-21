@@ -223,3 +223,6 @@ __marimo__/
 
 # Local editor settings
 .vscode
+
+# Claude Code local settings (contains auth tokens - never commit)
+.claude/settings.local.json
