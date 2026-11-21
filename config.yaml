@@ -1,0 +1,23 @@
+model_list:
+  - model_name: nvidia-lightning-30b
+    litellm_params:
+      model: nvidia_nim/nvidia/nemotron-3.5-lightning-30b-a3b
+      api_key: os.environ/NVIDIA_NIM_API_KEY
+  - model_name: nvidia-super-vl-120b
+    litellm_params:
+      model: nvidia_nim/nvidia/nemotron-3.5-super-vl-120b-a12b
+      api_key: os.environ/NVIDIA_NIM_API_KEY
+  - model_name: nvidia-main-ultra-550b
+    litellm_params:
+      model: nvidia_nim/nvidia/nemotron-3-ultra-550b-a55b
+      api_key: os.environ/NVIDIA_NIM_API_KEY 
+  - model_name : nvidia-nano-30b
+    litellm_params:
+      model: nvidia_nim/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning
+      api_key: os.environ/NVIDIA_NIM_API_KEY
+
+general_settings:
+  master_key: 123456789pj
+litellm_settings:
+  drop_params: true
+  request_timeout: 120

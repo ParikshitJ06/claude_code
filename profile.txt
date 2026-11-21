@@ -1,0 +1,30 @@
+Adding a one-command launcher to your PowerShell profile
+Add shortcut commands to your PowerShell profile (notepad $PROFILE), so you can pick a mode per session
+
+##poweshell/Terminal
+New-Item -ItemType Directory -Force -Path (Split-Path $PROFILE)
+New-Item -ItemType File -Force -Path $PROFILE
+notepad $PROFILE
+
+
+
+##poweshell/Terminal
+
+function litellm-up {
+  $exe     = "C:\Users\jadha\python_workspace\venv\Scripts\litellm.exe"
+  $config  = "C:\Users\jadha\python_workspace\config.yaml"
+  $envFile = "C:\Users\jadha\python_workspace\.env"
+
+  Get-Content $envFile | ForEach-Object {
+    if ($_ -match '^\s*([^#=\s]+)\s*=\s*(.*)$') {
+      Set-Item -Path "Env:$($Matches[1])" -Value $Matches[2].Trim('"')
+    }
+  }
+
+  & $exe --config $config --port 4000
+}
+
+Run . $PROFILE once to reload, then:
+
+Terminal 1: litellm-up (leave it running)
+Terminal 2: cd into your project and run claude
